@@ -1,26 +1,33 @@
 /**
- * Calculator module with basic arithmetic operations
+ * Calculator Module
+ * Provides basic arithmetic operations with input validation
  */
 
 /**
- * Add two numbers
- * @param {number} a - First number
- * @param {number} b - Second number
- * @returns {number} Sum of a and b
+ * Adds two numbers
+ * @param {number} a - First number (must be non-negative)
+ * @param {number} b - Second number (must be non-negative)
+ * @returns {number|null} The sum of a and b, or null if inputs are invalid
  */
 function add(a, b) {
+  if (a < 0 || b < 0) {
+    return null;
+  }
   return a + b;
 }
 
 /**
- * Multiply two numbers
- * @param {number} a - First number
- * @param {number} b - Second number
- * @returns {number} Product of a and b
+ * Multiplies two numbers
+ * @param {number} a - First number (must be non-negative)
+ * @param {number} b - Second number (must be non-negative)
+ * @returns {number|null} The product of a and b, or null if inputs are invalid
  */
 function multiply(a, b) {
+  if (a < 0 || b < 0) {
+    return null;
+  }
   return a * b;
 }
 
-// Export functions for module usage
+// Export functions as a module
 module.exports = { add, multiply };
